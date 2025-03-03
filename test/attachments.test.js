@@ -33,6 +33,7 @@ describe('Test attachments service', () => {
     const response = await POST `${Incidents}(${ID},${draft})/${activate}`
     expect(response.status).to.eql(201)
   })
+  
 
   it(`should edit the incident to add an attachment`, async () => {
     await POST `${Incidents}(${ID},${active})/${edit}`
